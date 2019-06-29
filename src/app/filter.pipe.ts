@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filter'
+  name: 'filter',
+  pure: true
 })
 export class FilterPipe implements PipeTransform {
 
@@ -15,7 +16,6 @@ export class FilterPipe implements PipeTransform {
         resultArray.push(item);
       }
     }
-    console.log('Vlaue: ',value,' resultArray: ',  resultArray);
     return resultArray;
   }
 
